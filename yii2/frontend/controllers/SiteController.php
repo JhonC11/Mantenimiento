@@ -21,8 +21,11 @@ class SiteController extends Controller
     /**
      * @inheritdoc
      */
-    public function actionSaludo(){
-        return $this-> render("saludo");
+    public function actionManem(){
+        return $this-> render("manem");
+    }
+    public function actionManpla(){
+        return $this-> render("manpla");
     }
     
     public function behaviors()

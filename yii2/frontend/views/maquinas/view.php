@@ -8,7 +8,6 @@ use yii\widgets\DetailView;
 
 $this->title = $model->id_maquina;
 $this->params['breadcrumbs'][] = ['label' => 'Maquinas', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="maquinas-view">
 
@@ -22,27 +21,27 @@ $this->params['breadcrumbs'][] = $this->title;
                 'confirm' => 'Are you sure you want to delete this item?',
                 'method' => 'post',
             ],
-        ]) ?>
-    </p>
+            ]) ?>
+        </p>
 
-    <?= DetailView::widget([
-        'model' => $model,
-        'attributes' => [
-            'id_maquina',
-            'codigo_maquina',
-            'nombre',
-            'marca',
-            'voltaje',
-            'modelo',
-            'peso',
-            'serie',
-            'for_max',
-            'for_min',
-            'uni_max',
-            'uni_min',
-            'proveedor',
-            'referencia',
-        ],
-    ]) ?>
+        <?= DetailView::widget([
+            'model' => $model,
+            'attributes' => [
+                'id_maquina',
+                'codigo_maquina',
+                'nombre',
+                'marca',
+                'voltaje',
+                'modelo',
+                'peso',
+                'serie',
+                'for_max',
+                'for_min',
+                'uni_max',
+                'uni_min',
+                'proveedor',
+                'referencia',
+            ],
+            ]) ?>
 
-</div>
+        </div>

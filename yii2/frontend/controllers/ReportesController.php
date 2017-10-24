@@ -3,16 +3,16 @@
 namespace frontend\controllers;
 
 use Yii;
-use app\models\Maquinas;
-use app\models\searchMaquinas;
+use app\models\Reportes;
+use app\models\searchReportes;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * MaquinasController implements the CRUD actions for Maquinas model.
+ * ReportesController implements the CRUD actions for Reportes model.
  */
-class MaquinasController extends Controller
+class ReportesController extends Controller
 {
     /**
      * @inheritdoc
@@ -30,12 +30,12 @@ class MaquinasController extends Controller
     }
 
     /**
-     * Lists all Maquinas models.
+     * Lists all Reportes models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new searchMaquinas();
+        $searchModel = new searchReportes();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,7 +45,7 @@ class MaquinasController extends Controller
     }
 
     /**
-     * Displays a single Maquinas model.
+     * Displays a single Reportes model.
      * @param integer $id
      * @return mixed
      */
@@ -57,16 +57,16 @@ class MaquinasController extends Controller
     }
 
     /**
-     * Creates a new Maquinas model.
+     * Creates a new Reportes model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Maquinas();
+        $model = new Reportes();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_maquina]);
+            return $this->redirect(['view', 'id' => $model->id_reporte]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -75,7 +75,7 @@ class MaquinasController extends Controller
     }
 
     /**
-     * Updates an existing Maquinas model.
+     * Updates an existing Reportes model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -85,7 +85,7 @@ class MaquinasController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_maquina]);
+            return $this->redirect(['view', 'id' => $model->id_reporte]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -94,7 +94,7 @@ class MaquinasController extends Controller
     }
 
     /**
-     * Deletes an existing Maquinas model.
+     * Deletes an existing Reportes model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -107,15 +107,15 @@ class MaquinasController extends Controller
     }
 
     /**
-     * Finds the Maquinas model based on its primary key value.
+     * Finds the Reportes model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Maquinas the loaded model
+     * @return Reportes the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Maquinas::findOne($id)) !== null) {
+        if (($model = Reportes::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

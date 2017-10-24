@@ -1,53 +1,37 @@
 <?php
 
 /* @var $this yii\web\View */
-
-$this->title = 'My Yii Application';
+use yii\helpers\Html;
+$this->title = 'Mantenimiento la patria';
 ?>
+
 <div class="site-index">
+    <?php if (Yii::$app->user->isGuest) { ?>
 
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
+        <div class="jumbotron">
+            <h1>Bienvenido al gestor de mantenimientos. </h1>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+            <p class="lead">Si aún no tiene una cuenta, registrese <a href="?r=site/signup">aquí</a>.</p>
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-
-    <div class="body-content">
-
+        </div>
+        <?php } else{?>
+        <h1 class="text-center">Dashboard</h1>
+        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic provident, aut, temporibus perferendis consequatur eaque explicabo illo impedit dicta nam molestias, sint eveniet excepturi, esse ducimus magni nisi reiciendis quam placeat! Deleniti neque in doloremque, natus aliquam asperiores, enim nesciunt laudantium sequi, error necessitatibus dolor culpa veritatis blanditiis eaque dolore.</p>
         <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+            <div class="container-fluid text-center">
+                <div class="col-md-6 ">
+                    <h1 class=""></h1>
+                    <?= Html::img('@web/images/2.png', ['class' => 'featured-image img-responsive', 'style' => 'width:474px; height:400px']) ?>
+                    <a href="?r=site/manpla">
+                        <button class="btn btn-default manpla" style="    position: absolute;left: -37px;top: 149px;">Mantenimiento planta.</button>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <h1 class=""></h1>
+                    <?= Html::img('@web/images/1.png', ['class' => 'featured-image img-responsive', 'style' => 'width:500px; height:400px']) ?>
+                    <a href="?r=site/manem"><button class="btn btn-default manem" style="position: relative;top: -227px;right: -149px;">Mantenimiento empresa.</button></a>
+                </div>
             </div>
         </div>
-
+        <?php }?>
     </div>
-</div>
