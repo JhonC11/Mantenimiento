@@ -22,14 +22,16 @@ $this->title = 'Mantenimiento la patria';
                 <div class="col-md-6 ">
                     <h1 class=""></h1>
                     <?= Html::img('@web/images/2.png', ['class' => 'featured-image img-responsive', 'style' => 'width:474px; height:400px']) ?>
-                    <a href="?r=site/manpla">
+                    <a href="?r=site/manplanta">
                         <button class="btn btn-default manpla" style="    position: absolute;left: -37px;top: 149px;">Mantenimiento planta.</button>
                     </a>
                 </div>
                 <div class="col-md-6">
                     <h1 class=""></h1>
                     <?= Html::img('@web/images/1.png', ['class' => 'featured-image img-responsive', 'style' => 'width:500px; height:400px']) ?>
-                    <a href="?r=site/manem"><button class="btn btn-default manem" style="position: relative;top: -227px;right: -149px;">Mantenimiento empresa.</button></a>
+                    <a href="?r=site/manempresa">
+                        <button class="btn btn-default manem" style="position: relative;top: -227px;right: -149px;">Mantenimiento empresa.</button>
+                    </a>
                 </div>
             </div>
         </div>

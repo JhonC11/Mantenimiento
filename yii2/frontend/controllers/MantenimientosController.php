@@ -66,7 +66,9 @@ class MantenimientosController extends Controller
         $model = new Mantenimientos();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_mantenimiento]);
+            /*return $this->redirect(['view', 'id' => $model->id_mantenimiento]);*/
+            return $this->redirect(['index']);
+            
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -85,7 +87,9 @@ class MantenimientosController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_mantenimiento]);
+            /*return $this->redirect(['view', 'id' => $model->id_mantenimiento]);*/
+            return $this->redirect(['index']);
+
         } else {
             return $this->render('update', [
                 'model' => $model,

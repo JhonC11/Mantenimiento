@@ -15,11 +15,13 @@ class SiteController extends Controller
     /**
      * @inheritdoc
      */
-    public function actionManem(){
-        return $this-> render("manem");
+
+    public function actionManempresa(){
+        return $this-> render('manempresa');
     }
-    public function actionManpla(){
-        return $this-> render("manpla");
+    
+    public function actionManplanta(){
+        return $this-> render('manplanta');
     }
     
 
