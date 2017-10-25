@@ -9,7 +9,7 @@ $this->title = 'Mantenimiento la patria';
 	<div class="col-md-8 col-md-offset-2" style="background-color: rgb(0, 86, 120)">
 		<div class="col-md-6">
 			<?= Html::img('@web/images/4.jpg', ['class' => 'featured-image', 'style' => 'width:250px; height:250px; margin-top: 30px; margin-left: 50px']) ?>
-			<a href="?r=otras-mantenimientos"><button class="btn btn-primary" style="position: relative;top: -121px;left: 117px;">Mantenimientos</button></a>
+			<a href="?r=mantenimientos"><button class="btn btn-primary" style="position: relative;top: -121px;left: 117px;">Mantenimientos</button></a>
 
 			
 		</div>

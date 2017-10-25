@@ -15,6 +15,13 @@ class SiteController extends Controller
     /**
      * @inheritdoc
      */
+    public function actionManem(){
+        return $this-> render("manem");
+    }
+    public function actionManpla(){
+        return $this-> render("manpla");
+    }
+    
 
     public function behaviors()
     {
